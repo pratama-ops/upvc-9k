@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,11 @@
     <title>Certificate Detail</title>
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
             box-sizing: border-box;
         }
@@ -15,6 +21,7 @@
         body {
             margin: 0;
             padding: 0;
+            width: 100%;
             min-height: 100%;
         }
 
@@ -24,10 +31,13 @@
         }
 
         .page {
+            width: 100%;
             min-height: 100vh;
+
             display: flex;
             flex-direction: column;
         }
+
 
         /* =========================
            LOGO
@@ -47,8 +57,10 @@
             width: 58px;
             height: 58px;
 
-            object-fit: contain;
             display: block;
+
+            object-fit: contain;
+            object-position: left center;
         }
 
 
@@ -109,6 +121,7 @@
 
             overflow-wrap: break-word;
             word-wrap: break-word;
+            word-break: normal;
         }
 
 
@@ -123,8 +136,9 @@
             color: white;
 
             text-align: right;
+            vertical-align: middle;
 
-            padding: 5px 8px;
+            padding: 6px 8px;
 
             font-family: "Times New Roman", Times, serif;
             font-size: 27px;
@@ -133,6 +147,8 @@
             line-height: 1.05;
 
             overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: normal;
         }
 
 
@@ -147,8 +163,9 @@
             color: #111;
 
             text-align: left;
+            vertical-align: middle;
 
-            padding: 5px 7px;
+            padding: 6px 8px;
 
             font-family: "Times New Roman", Times, serif;
             font-size: 27px;
@@ -157,6 +174,7 @@
 
             overflow-wrap: break-word;
             word-wrap: break-word;
+            word-break: normal;
         }
 
 
@@ -165,12 +183,11 @@
         ========================= */
 
         .footer {
-            margin-top: auto;
-
             width: 100%;
             min-height: 35px;
 
-            padding: 3px 8px;
+            margin-top: auto;
+            padding: 4px 8px;
 
             background: #087bbd;
             color: white;
@@ -184,16 +201,18 @@
             font-family: "Times New Roman", Times, serif;
             font-size: 27px;
 
+            line-height: 1.1;
+
             border-top: 1px solid #ddd;
         }
 
 
         /* =================================================
-           MOBILE
-           <= 600px
+           TABLET
+           601px - 768px
         ================================================= */
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 768px) {
 
             .logo-container {
                 height: 82px;
@@ -206,114 +225,159 @@
             }
 
             .title {
-                min-height: 60px;
-
+                min-height: 62px;
                 padding: 7px 8px;
-
-                font-size: 25px;
+                font-size: 26px;
             }
 
             .label {
-                font-size: 22px;
-                padding: 5px 6px;
+                width: 37%;
+                padding: 6px 7px;
+                font-size: 24px;
             }
 
             .value {
-                font-size: 22px;
-                padding: 5px 6px;
+                width: 63%;
+                padding: 6px 7px;
+                font-size: 24px;
             }
 
             .footer {
                 min-height: 34px;
+                font-size: 22px;
+            }
+        }
 
+
+        /* =================================================
+           MOBILE
+           481px - 600px
+        ================================================= */
+
+        @media screen and (max-width: 600px) {
+
+            .logo-container {
+                height: 76px;
+                padding: 7px;
+            }
+
+            .logo {
+                width: 52px;
+                height: 52px;
+            }
+
+            .title {
+                min-height: 58px;
+                padding: 6px 8px;
+                font-size: 24px;
+            }
+
+            .label {
+                width: 39%;
+                padding: 5px 6px;
                 font-size: 21px;
+            }
+
+            .value {
+                width: 61%;
+                padding: 5px 6px;
+                font-size: 21px;
+            }
+
+            .footer {
+                min-height: 33px;
                 padding: 4px 6px;
+                font-size: 20px;
             }
         }
 
 
         /* =================================================
            MOBILE KECIL
-           <= 480px
+           376px - 480px
         ================================================= */
 
         @media screen and (max-width: 480px) {
 
             .logo-container {
-                height: 75px;
-                padding: 7px;
+                height: 70px;
+                padding: 6px;
             }
 
             .logo {
-                width: 50px;
-                height: 50px;
+                width: 48px;
+                height: 48px;
             }
 
             .title {
-                min-height: 55px;
-
+                min-height: 53px;
                 padding: 6px;
-
-                font-size: 22px;
+                font-size: 21px;
             }
 
             .label {
-                font-size: 19px;
+                width: 41%;
                 padding: 5px;
+                font-size: 18px;
+                line-height: 1.05;
             }
 
             .value {
-                font-size: 19px;
+                width: 59%;
                 padding: 5px;
+                font-size: 18px;
+                line-height: 1.12;
             }
 
             .footer {
-                min-height: 32px;
-
-                font-size: 18px;
+                min-height: 31px;
                 padding: 4px;
+                font-size: 17px;
             }
         }
 
 
         /* =================================================
            MOBILE SANGAT KECIL
-           <= 375px
+           321px - 375px
         ================================================= */
 
         @media screen and (max-width: 375px) {
 
             .logo-container {
-                height: 68px;
-                padding: 6px;
+                height: 64px;
+                padding: 5px;
             }
 
             .logo {
-                width: 46px;
-                height: 46px;
+                width: 44px;
+                height: 44px;
             }
 
             .title {
-                min-height: 50px;
-
+                min-height: 49px;
                 padding: 5px;
-
-                font-size: 20px;
+                font-size: 19px;
             }
 
             .label {
-                font-size: 17px;
+                width: 43%;
                 padding: 4px;
+                font-size: 16px;
+                line-height: 1.05;
             }
 
             .value {
-                font-size: 17px;
+                width: 57%;
                 padding: 4px;
+                font-size: 16px;
+                line-height: 1.12;
             }
 
             .footer {
-                font-size: 16px;
-                padding: 4px;
+                min-height: 29px;
+                padding: 3px;
+                font-size: 15px;
             }
         }
 
@@ -326,42 +390,50 @@
         @media screen and (max-width: 320px) {
 
             .logo-container {
-                height: 62px;
+                height: 58px;
                 padding: 5px;
             }
 
             .logo {
-                width: 42px;
-                height: 42px;
+                width: 40px;
+                height: 40px;
             }
 
             .title {
-                min-height: 46px;
-
-                font-size: 18px;
+                min-height: 45px;
+                padding: 4px;
+                font-size: 17px;
             }
 
             .label {
-                font-size: 15px;
-                padding: 3px;
+                width: 45%;
+                padding: 3px 4px;
+                font-size: 14px;
+                line-height: 1.05;
             }
 
             .value {
-                font-size: 15px;
-                padding: 3px;
+                width: 55%;
+                padding: 3px 4px;
+                font-size: 14px;
+                line-height: 1.12;
             }
 
             .footer {
-                font-size: 14px;
+                min-height: 27px;
                 padding: 3px;
+                font-size: 13px;
             }
         }
+
     </style>
 </head>
+
 
 <body>
 
 <div class="page">
+
 
     <!-- =========================
          LOGO
@@ -384,6 +456,7 @@
 
     <main class="content">
 
+
         <!-- TITLE -->
 
         <div class="title">
@@ -394,6 +467,9 @@
         <!-- CERTIFICATE TABLE -->
 
         <table class="certificate-table">
+
+
+            <!-- CB CERT NO -->
 
             <tr>
                 <td class="label">
@@ -406,6 +482,8 @@
             </tr>
 
 
+            <!-- COMPANY NAME -->
+
             <tr>
                 <td class="label">
                     Company Name
@@ -417,6 +495,8 @@
             </tr>
 
 
+            <!-- COMPANY ADDRESS -->
+
             <tr>
                 <td class="label">
                     Company<br>
@@ -424,12 +504,14 @@
                 </td>
 
                 <td class="value">
-                    Jl. Margomulyo No. 51A Kav. 17 -<br>
-                    19, Asemrowo, Surabaya, Jawa<br>
+                    Jl. Margomulyo No. 51A Kav. 17 -
+                    19, Asemrowo, Surabaya, Jawa
                     Timur - Indonesia
                 </td>
             </tr>
 
+
+            <!-- SCOPE -->
 
             <tr>
                 <td class="label">
@@ -437,12 +519,14 @@
                 </td>
 
                 <td class="value">
-                    Manufacture of upvc profiling<br>
-                    (windows, doorframes, doors,<br>
+                    Manufacture of upvc profiling
+                    (windows, doorframes, doors,
                     roof)
                 </td>
             </tr>
 
+
+            <!-- STANDARD -->
 
             <tr>
                 <td class="label">
@@ -454,6 +538,8 @@
                 </td>
             </tr>
 
+
+            <!-- ACCREDITATION -->
 
             <tr>
                 <td class="label">
@@ -467,6 +553,8 @@
             </tr>
 
 
+            <!-- ISSUE DATE -->
+
             <tr>
                 <td class="label">
                     Issue Date
@@ -477,6 +565,8 @@
                 </td>
             </tr>
 
+
+            <!-- EXPIRES DATE -->
 
             <tr>
                 <td class="label">
@@ -489,6 +579,8 @@
             </tr>
 
 
+            <!-- STATUS -->
+
             <tr>
                 <td class="label">
                     Status
@@ -498,6 +590,7 @@
                     Valid
                 </td>
             </tr>
+
 
         </table>
 
@@ -511,6 +604,7 @@
     <footer class="footer">
         Copyright © 2026 SNQA. All rights reserved.
     </footer>
+
 
 </div>
 
