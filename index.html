@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificate Detail</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background: white;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo-container {
+            height: 90px;
+            padding: 10px 8px 6px 8px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 58px;
+            height: 58px;
+
+            object-fit: contain;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+            width: 100%;
+            padding: 0 4px;
+        }
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .title {
+            width: 100%;
+            height: 68px;
+
+            background: #f79432;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "Times New Roman", Times, serif;
+            font-size: 28px;
+            font-weight: bold;
+
+            border: 1px solid #ddd;
+        }
+
+        /* =========================
+           TABLE
+        ========================= */
+
+        .certificate-table {
+            width: 100%;
+
+            border-collapse: collapse;
+            table-layout: fixed;
+
+            font-family: "Times New Roman", Times, serif;
+            font-size: 27px;
+        }
+
+        .certificate-table td {
+            border: 1px solid #ddd;
+            vertical-align: middle;
+        }
+
+        /* =========================
+           LEFT COLUMN
+        ========================= */
+
+        .label {
+            width: 34%;
+
+            background: #087bbd;
+            color: white;
+
+            text-align: right;
+
+            padding: 5px 8px;
+
+            font-family: "Times New Roman", Times, serif;
+            font-size: 27px;
+            font-weight: bold;
+
+            line-height: 1.05;
+        }
+
+        /* =========================
+           RIGHT COLUMN
+        ========================= */
+
+        .value {
+            width: 66%;
+
+            background: #f5f5f5;
+            color: #111;
+
+            text-align: left;
+
+            padding: 5px 7px;
+
+            font-family: "Times New Roman", Times, serif;
+            font-size: 27px;
+
+            line-height: 1.15;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            margin-top: auto;
+
+            width: 100%;
+            min-height: 35px;
+
+            background: #087bbd;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "Times New Roman", Times, serif;
+            font-size: 27px;
+
+            text-align: center;
+
+            border-top: 1px solid #ddd;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .logo-container {
+                height: 90px;
+                padding-left: 8px;
+            }
+
+            .logo {
+                width: 58px;
+                height: 58px;
+            }
+
+            .title {
+                height: 68px;
+                font-size: 27px;
+            }
+
+            .certificate-table {
+                font-size: 25px;
+            }
+
+            .label {
+                width: 34%;
+                padding: 5px 6px;
+                font-size: 25px;
+            }
+
+            .value {
+                width: 66%;
+                padding: 5px 6px;
+                font-size: 25px;
+            }
+
+            .footer {
+                min-height: 35px;
+                font-size: 24px;
+                padding: 3px;
+            }
+        }
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 400px) {
+
+            .title {
+                font-size: 23px;
+            }
+
+            .certificate-table {
+                font-size: 20px;
+            }
+
+            .label {
+                font-size: 20px;
+            }
+
+            .value {
+                font-size: 20px;
+            }
+
+            .footer {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- =========================
+         LOGO
+         
+         Ganti "nqa-logo.png"
+         dengan file logo NQA asli
+    ========================= -->
+
+    <div class="logo-container">
+
+        <img
+            src="images (2).jpeg"
+            alt="NQA Logo"
+            class="logo"
+        >
+
+    </div>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="content">
+
+        <!-- TITLE -->
+
+        <div class="title">
+            PT. UPVC Indonesia
+        </div>
+
+
+        <!-- CERTIFICATE TABLE -->
+
+        <table class="certificate-table">
+
+            <tr>
+                <td class="label">
+                    CB Cert NO.
+                </td>
+
+                <td class="value">
+                    120755
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Company Name
+                </td>
+
+                <td class="value">
+                    PT. UPVC Indonesia
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Company<br>
+                    Address
+                </td>
+
+                <td class="value">
+                    Jl. Margomulyo No. 51A Kav. 17 -<br>
+                    19, Asemrowo, Surabaya, Jawa<br>
+                    Timur - Indonesia
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Scope
+                </td>
+
+                <td class="value">
+                    Manufacture of upvc profiling<br>
+                    (windows, doorframes, doors,<br>
+                    roof)
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Standard
+                </td>
+
+                <td class="value">
+                    ISO 9001:2015
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Accreditation<br>
+                    Symbol
+                </td>
+
+                <td class="value">
+                    UKAS
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Issue Date
+                </td>
+
+                <td class="value">
+                    10 August 2026
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Expires Date
+                </td>
+
+                <td class="value">
+                    10 August 2029
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="label">
+                    Status
+                </td>
+
+                <td class="value">
+                    Valid
+                </td>
+            </tr>
+
+        </table>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="footer">
+        Copyright © 2026 SNQA. All rights reserved.
+    </footer>
+
+</div>
+
+</body>
+</html>
